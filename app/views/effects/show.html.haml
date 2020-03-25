@@ -1,0 +1,36 @@
+.wrapper
+  = render 'temple/head'
+.block
+  .sidebar
+    .sidebar-link
+      .content
+        .content-name
+          投稿者：
+          = @effect.user.nickname
+        .content-maker
+          メーカー：
+          =@effect.maker
+        .content-text
+          　名前　：
+          =@effect.name
+        .content-attri
+          　種類　：
+          =@effect.attri
+      .content-image
+        = image_tag @effect.image.url
+      .link
+        =@effect.text
+  .comment
+    .comment__view
+      -@comments.each do |comment| 
+        .comment__view__box
+          = link_to comment.user.nickname, user_path(@effect.user.id),class:"comment__view__box-name"
+          .comment__view__box-row
+            .comment__view__box-row-text
+              = comment.text 
+    .send
+      = form_with(model: [@effect, @comment], local: true) do |form| 
+        .send-form
+          = form.text_area :text
+          .send-form-submit
+            = form.submit "SEND"

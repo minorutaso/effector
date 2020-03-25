@@ -1,0 +1,213 @@
+.header{
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    line-height: 70px;
+    justify-content: space-between;
+    text-decoration: none;
+    background-image:  image-url("2020");
+    background-size:  cover;
+    .search-form{
+        .search-input{font-size: 20px;
+            .search-btn{
+            }
+        }
+    }
+    &__title{
+        font-size: 50px;
+        margin-left: 20px;
+        height: 60px;
+        text-decoration: none;
+        color: cornflowerblue;
+    }
+    &__list{
+        font-size: 20px;
+        margin-right: 50px;
+        color: turquoise;
+        &-user{
+            color: peru;
+            font-size: 30px;
+            &-nickname{
+                color: sandybrown;
+            }
+        }
+        &-post{
+            margin-left: 20px;
+        }
+        &-mypage{
+            margin-left: 20px;
+        }
+        &-logout{
+            margin-left: 20px;
+        }
+        &-login{
+            margin-right: 50px;
+            font-size: 50px;
+            color: yellow;
+        }
+        &-new{
+            margin-right: 300px;
+            font-size: 50px;
+        }
+    }
+}
+a{
+    text-decoration: none;
+}
+.main{
+    background-color: darkgrey;
+    width: calc(100vw - 30px);
+    height: 2000px;
+    overflow: scroll;
+    padding: 15px;
+    background-image:  image-url("20100421154757fc1");
+    background-size: cover;
+    background-attachment: fixed;
+    .content{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: flex-start;
+        position: relative;
+        &__box{
+            background-color: ghostwhite;
+            border: solid 1px black;
+            margin: 18px;
+            text-align: right;
+            &__hi{
+                display: flex;
+                margin: 3px;
+                text-align: left;
+                &-maker{
+                    padding-right: 10px;
+                    &-text{
+                        font-size: 22px;
+                    }
+                }
+            }
+            &__row{
+                margin: 3px;
+                display: flex;
+                justify-content: space-between;
+                .post{
+                    display: flex;
+                    font-size: 14px;
+                        &-name{
+                            margin-left: 3px;
+                        }
+                }
+                .koop{
+                    display: flex;
+                    font-size: 14px;
+                    &-attri{
+                        margin-left: 3px;
+                    }
+                }
+            }
+            &__image{
+                    border-radius: 50%;
+                    transition: all 0.6s ease 0s;
+                    height: 280px;
+                    width: 280px;
+                    margin: 10px;
+                    padding: 5px;
+                    text-align: center;
+                    .image{
+                        
+
+                    }
+            }
+            &__image:hover {
+                transform: scale(1.1, 1.1)
+            }
+        }
+    }
+}
+.page{
+    height: 70px;
+    background-image:  image-url("banner-1571870_1280");
+    background-size:  cover;
+    &-name{
+        font-size: 30px;
+        margin-left: 20px;
+        line-height: 74px;
+    }
+}
+.view{
+    height: calc(100vh - 240px);
+    width: calc(100vw - 40px);
+    background-image:  image-url("back-new.jpg");
+    background-size:  cover;
+    font-size: 20px;
+    padding: 20px;
+    .view_box{
+        height: 100px;
+        width: 100px;
+    }
+    input{
+        display: block;
+    }
+
+    .form{// 新規投稿ページ
+        &__row{
+            &-img{
+                .form-in{
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+        }
+            &-maker{
+                width: 264px;
+                margin-top: 10px;
+            }
+            &-text{
+                resize: none;
+                width: 264px;
+                height: 200px;
+                margin-top: 10px;
+            }
+            #effect_attri{
+                margin-top: 10px;
+                height: 30px;
+                width: 266px;
+            }
+            &-label{
+                &-img{
+                    cursor: pointer;
+                    font-size: 40px;
+                    margin-top: 10px;
+                    font-size: 30px;
+                }
+                &-btn{
+                    display: none;
+                }
+            }
+            &-btn:active {
+                transform: translateY(2px)
+            }
+            &-btn:hover{
+                background-color: black;
+                color: white;
+            }
+            &-btn{
+                cursor: pointer;
+                border: solid 1px;
+                margin-top: 10px;
+                width:100px;
+                border-radius: 20px;
+                box-shadow: 3px 3px 3px gray;
+                transition: 0.3s;
+            }
+    }
+}
+.footer{
+    height: 300px;
+    background-image:  image-url("banner-1571870_1280");
+    background-size:  cover;
+}
+img{
+    height: 100%;
+}
+
+
+

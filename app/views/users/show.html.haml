@@ -1,0 +1,32 @@
+.wrapper
+= render 'temple/head'
+
+.main
+  .content
+    - @effects.each do |effect|
+      .content__box
+        - if user_signed_in? && current_user.id == effect.user_id
+          = link_to '編集', "/effects/#{effect.id}/edit", method: :get
+          = link_to '削除', "/effects/#{effect.id}", method: :delete
+        .content__box__hi
+          .content__box__hi-maker
+            = effect.maker
+            .content__box__hi-text
+              = effect.name
+        .content__box__row
+          .koop
+            種類:
+            .koop-attri
+              = effect.attri
+          .post
+            投稿者:
+            .post-name
+              = effect.user.nickname
+        .content__box__image
+          = link_to image_tag(effect.image.url),effect_path(effect.id), method: :get
+          
+
+.page
+  .page-name
+    = @nickname
+    さんの投稿一覧

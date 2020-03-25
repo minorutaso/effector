@@ -1,0 +1,24 @@
+.backimg{
+    height: calc(100vh - 400px);
+    width: calc(100vw - 400px);
+    background-image: image-url("fender-neck-1024x768");
+    background-size: cover;
+    text-align: center;
+    padding: 200px;
+    .newmenu{
+        margin:  auto;
+        
+        
+    height: 500px;
+    width: 800px;
+    background-color: rgba(241, 226, 168, 0.5);
+    .form-field{
+        font-size: 40px;
+    
+    }
+    .field{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+}

@@ -1,0 +1,18 @@
+.view
+  エフェクターの情報を入力してください。
+  .preview
+  .form
+    = form_with(model: @effect, local: true) do |f|
+      .form__hi
+        = f.text_field :maker, placeholder: "メーカー名" ,class: "form-maker"
+        = f.text_field :name, placeholder: "エフェクター名" ,class: "form-maker"
+        = f.select :attri, [["歪み系", "歪み系"], ["空間系", "空間系"],  ["モジュレーション系", "モジュレーション系"], ["ダイナミクス系", "ダイナミクス系"],["フィルター系", "フィルター系"],["アンプ系", "アンプ系"],["ハーモニー系", "ハーモニー系"],["ボリューム系", "ボリューム系"],["回路系", "回路系"],["シンセ系", "シンセ系"],["マルチエフェクター", "マルチエフェクター "]],  :prompt => "種類を選択してください",class: "form-attri"
+      .form__row
+        = f.text_area :text, placeholder: "説明" ,class: "form-text"
+        .form__row-img
+          = f.label :image, class: 'form-label' do
+            = icon('fas', 'image', class: "form-label-img")
+          = f.file_field :image,class: "form-label-btn",id:"effect_image"
+          .form-in
+          = image_tag @effect.image.url,id: :img_prev if @effect.image?
+          = f.submit '登録する' ,class: "form-btn"

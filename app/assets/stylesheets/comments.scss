@@ -1,0 +1,91 @@
+.block{
+    display: flex;
+.sidebar{
+    height: calc(100vh - 70px);
+    width: 340px;
+    background-image:  image-url("2020");
+    background-size: none;
+    color: snow;
+    &-link{
+        text-align: center;
+    .content{
+        padding: 10px;
+        text-align: left;
+        .content-name{
+            margin-top: 3px;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+    .content-maker{
+
+    }
+    .content-text{
+
+    }
+
+    .content-attri{
+
+    }
+    }
+    .content-image{
+        margin-top: 30px;
+        img{
+            height: 280px;
+            
+        }
+    }
+    
+}
+}
+img{
+    height: 100%;
+}
+
+.comment{
+
+    &__view{
+        height: calc(100vh - 210px);
+        width: calc(100vw - 340px);
+        background-image:  image-url("gahag-0118300661-1");
+        background-size: cover;
+        // background-attachment: fixed;
+        padding: 20px;
+        &__box{
+            height: auto;
+            width: auto;
+            background-color: rgba(218, 241, 255, 0.924);
+            margin-bottom: 20px;
+            
+        &-name{
+        margin-left: 18px;
+        }
+        
+        &-row{
+        &-text{
+            margin-left: 5px;
+            font-size: 20px;
+        }
+    }
+    }
+}
+    .send{
+        height: 80px;
+        width: calc(100vw - 320px);
+        background-color: salmon;
+        padding: 10px;
+        
+        .send__box{
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            }
+            .send__box-send{
+            
+            }
+            .send__box-pic{
+            
+            }
+        }
+    }
+}
