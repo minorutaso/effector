@@ -33,7 +33,8 @@
               = comment.text 
     .send
       = form_with(model: [@effect, @comment], local: true) do |form| 
-        .send-form
+        .send-comment
+          コメントを入力 :
           = form.text_area :text,class:"send-form"
-        .send-form-submit
-          = form.submit "SEND"
+          .send-form-submit
+            = form.submit "送信"

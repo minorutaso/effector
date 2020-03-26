@@ -6,23 +6,19 @@
     background-image:  image-url("2020");
     background-size: none;
     color: snow;
-    &-link{
-        text-align: center;
+    text-align: center;
     .content{
         padding: 10px;
         text-align: left;
         .content-name{
             margin-top: 3px;
             font-size: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
     }
-    .content-image{
-        margin-top: 30px;
         img{
             height: 280px;
         }
-    }
     .content-text{
         padding: 10px;
         font-size: 17px;
@@ -30,14 +26,11 @@
         max-height: 300px;
         background-color: rgba(80, 92, 104, 0.787);
         overflow: scroll;
-        
     }
-}
 }
 img{
     height: 100%;
 }
-
 .comment{
     &__view{
         height: calc(100vh - 140px);
@@ -71,15 +64,19 @@ img{
         width: calc(100vw - 320px);
         background-color: grey;
         padding: 10px;
-        &-form{
-            resize: none;
-            width: 90%;
-            height: 50px;
+        line-height: 80px;
+        &-comment{
+        display: flex;
+            .send-form{
+                margin: 10px 20px ;
+                resize: none;
+                width: 80%;
+                height: 60px;
             
-            &-submit{
+            .send-submit{
                 
             }
-    }
+    }}
 
         }
     }
