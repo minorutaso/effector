@@ -7,9 +7,9 @@
     background-image:  image-url("2020");
     background-size:  cover;
     a {
-      margin-left: 20px;
-      color: white;
-      font-size: 50px;  
+        margin-left: 20px;
+        color: white;
+        font-size: 50px;  
     }
     &__title-text{
         font-size: 17px;
@@ -55,6 +55,13 @@ a{
             border: solid 1px black;
             margin: 18px;
             text-align: right;
+            &-edit{
+                color: lightseagreen;
+            }
+            &-delete{
+                margin-right: 5px;
+                color: indianred;
+            }
             &__hi{
                 display: flex;
                 margin: 3px;
@@ -105,14 +112,11 @@ a{
     }
 }
 .page{
-    height: 70px;
-    background-image:  image-url("banner-1571870_1280");
-    background-size:  cover;
-    &-name{
-        font-size: 30px;
-        margin-left: 20px;
-        line-height: 74px;
-    }
+    text-align: center;
+    font-size: 30px;
+    margin-left: 20px;
+    line-height: 74px;
+    color: rgb(77, 77, 29);
 }
 .view{
     height: calc(100vh - 240px);
