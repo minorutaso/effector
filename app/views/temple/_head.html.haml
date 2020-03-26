@@ -1,6 +1,14 @@
 .header
   = link_to root_path,class:"header__title" do
-    エフェクター収集
+    Effector Collection
+    .header__title-text
+      エフェクターの情報交換サイトです。
+      %br
+      エフェクターの使用の感想などを記入し
+      %br
+      他の人との情報交換ができます。
+      %br
+      自分のコレクション用としても使用できます。
   - if user_signed_in? 
     .header__list
       = icon('fa', 'user', class: "header__list-user")
@@ -15,9 +23,10 @@
       = link_to destroy_user_session_path, method: :delete,class: "header__list-logout" do
         = icon('fa', 'user-times')
         ログアウト
-    = form_with(url: effects_searches_path, local: true, method: :get, class: "search-form") do |form| 
-      = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" 
-      = form.submit "検索", class: "search-btn"
+      .search
+        = form_with(url: effects_searches_path, local: true, method: :get) do |form| 
+          = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" 
+          = form.submit "検索", class: "search-btn"
   - else
     .header__list
       = link_to new_user_session_path,class: "header__list-login" do
