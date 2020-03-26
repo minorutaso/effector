@@ -2,12 +2,15 @@
 = render 'temple/head'
 
 .main
+  .page
+    = @nickname
+    さんの投稿一覧
   .content
     - @effects.each do |effect|
       .content__box
         - if user_signed_in? && current_user.id == effect.user_id
-          = link_to '編集', "/effects/#{effect.id}/edit", method: :get
-          = link_to '削除', "/effects/#{effect.id}", method: :delete
+          = link_to '編集', "/effects/#{effect.id}/edit", method: :get,class:"content__box-edit"
+          = link_to '削除', "/effects/#{effect.id}", method: :delete,class:"content__box-delete"
         .content__box__hi
           .content__box__hi-maker
             = effect.maker
@@ -26,7 +29,4 @@
           = link_to image_tag(effect.image.url),effect_path(effect.id), method: :get
           
 
-.page
-  .page-name
-    = @nickname
-    さんの投稿一覧
+

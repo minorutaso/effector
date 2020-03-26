@@ -4,50 +4,32 @@
     display: flex;
     line-height: 70px;
     justify-content: space-between;
-    text-decoration: none;
     background-image:  image-url("2020");
     background-size:  cover;
-    .search-form{
-        .search-input{font-size: 20px;
-            .search-btn{
-            }
-        }
-    }
-    &__title{
-        font-size: 50px;
+    a {
         margin-left: 20px;
-        height: 60px;
-        text-decoration: none;
-        color: cornflowerblue;
+        color: white;
+        font-size: 50px;  
+    }
+    &__title-text{
+        font-size: 17px;
+        margin-left: 20px;
+        line-height: 25px;
+        color: rgb(248, 244, 244);
     }
     &__list{
+        line-height: 80px;
         font-size: 20px;
         margin-right: 50px;
-        color: turquoise;
-        &-user{
-            color: peru;
-            font-size: 30px;
-            &-nickname{
-                color: sandybrown;
-            }
-        }
-        &-post{
+        color: rgb(248, 244, 244);
+        a{
             margin-left: 20px;
+            font-size: 20px;
+            color: rgb(248, 244, 244);
         }
-        &-mypage{
-            margin-left: 20px;
-        }
-        &-logout{
-            margin-left: 20px;
-        }
-        &-login{
-            margin-right: 50px;
-            font-size: 50px;
-            color: yellow;
-        }
-        &-new{
-            margin-right: 300px;
-            font-size: 50px;
+        .search{
+            margin-top: 30px;
+            text-align: right;
         }
     }
 }
@@ -73,6 +55,15 @@ a{
             border: solid 1px black;
             margin: 18px;
             text-align: right;
+            &-edit{
+                border: limegreen solid 1px;
+                color: lightseagreen;
+            }
+            &-delete{
+                margin-right: 5px;
+                border: rgb(224, 75, 75) solid 1px;
+                color: indianred;
+            }
             &__hi{
                 display: flex;
                 margin: 3px;
@@ -123,14 +114,11 @@ a{
     }
 }
 .page{
-    height: 70px;
-    background-image:  image-url("banner-1571870_1280");
-    background-size:  cover;
-    &-name{
-        font-size: 30px;
-        margin-left: 20px;
-        line-height: 74px;
-    }
+    text-align: center;
+    font-size: 30px;
+    margin-left: 20px;
+    line-height: 74px;
+    color: rgb(77, 77, 29);
 }
 .view{
     height: calc(100vh - 240px);

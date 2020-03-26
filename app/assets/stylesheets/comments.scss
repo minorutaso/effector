@@ -1,7 +1,7 @@
 .block{
     display: flex;
 .sidebar{
-    height: calc(100vh - 70px);
+    height: 100vh;
     width: 340px;
     background-image:  image-url("2020");
     background-size: none;
@@ -16,25 +16,22 @@
             font-size: 15px;
             margin-bottom: 15px;
         }
-    .content-maker{
-
-    }
-    .content-text{
-
-    }
-
-    .content-attri{
-
-    }
     }
     .content-image{
         margin-top: 30px;
         img{
             height: 280px;
-            
         }
     }
-    
+    .content-text{
+        padding: 10px;
+        font-size: 17px;
+        height: auto;
+        max-height: 300px;
+        background-color: rgba(80, 92, 104, 0.787);
+        overflow: scroll;
+        
+    }
 }
 }
 img{
@@ -42,50 +39,48 @@ img{
 }
 
 .comment{
-
     &__view{
-        height: calc(100vh - 210px);
+        height: calc(100vh - 140px);
         width: calc(100vw - 340px);
-        background-image:  image-url("gahag-0118300661-1");
+        background-image:  image-url("commentback");
         background-size: cover;
-        // background-attachment: fixed;
         padding: 20px;
+        overflow: scroll;
         &__box{
             height: auto;
-            width: auto;
+            width: 750px;
             background-color: rgba(218, 241, 255, 0.924);
             margin-bottom: 20px;
-            
-        &-name{
-        margin-left: 18px;
-        }
-        
+            padding: 5px;
+            &-hi{
+                display: flex;
+                justify-content: space-between;
+            }
         &-row{
-        &-text{
-            margin-left: 5px;
-            font-size: 20px;
+            &__text{
+                width: 750px;
+                margin-left: 5px;
+                font-size: 20px;
+                overflow-wrap: break-word;
+            }
         }
-    }
     }
 }
     .send{
         height: 80px;
         width: calc(100vw - 320px);
-        background-color: salmon;
+        background-color: grey;
         padding: 10px;
-        
-        .send__box{
-            height: 100%;
-            width: 100%;
-            background-color: white;
-            display: flex;
-            }
-            .send__box-send{
+        &-form{
+            resize: none;
+            width: 90%;
+            height: 50px;
             
+            &-submit{
+                
             }
-            .send__box-pic{
-            
-            }
+    }
+
         }
     }
 }

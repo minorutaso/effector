@@ -9,28 +9,31 @@
           = @effect.user.nickname
         .content-maker
           メーカー：
-          =@effect.maker
-        .content-text
+          = @effect.maker
+        .content-effect-name
           　名前　：
-          =@effect.name
+          = @effect.name
         .content-attri
           　種類　：
-          =@effect.attri
+          = @effect.attri
       .content-image
         = image_tag @effect.image.url
-      .link
+      .content-text
         =@effect.text
   .comment
     .comment__view
       -@comments.each do |comment| 
         .comment__view__box
-          = link_to comment.user.nickname, user_path(@effect.user.id),class:"comment__view__box-name"
-          .comment__view__box-row
-            .comment__view__box-row-text
+          .comment__view__box-hi
+            = link_to comment.user.nickname, user_path(@effect.user.id),class:"comment__view__box-hi-name"
+            .comment__view__box-hi-time
+              = comment.created_at
+          .comment__view__box-row  
+            .comment__view__box-row__text
               = comment.text 
     .send
       = form_with(model: [@effect, @comment], local: true) do |form| 
         .send-form
-          = form.text_area :text
-          .send-form-submit
-            = form.submit "SEND"
+          = form.text_area :text,class:"send-form"
+        .send-form-submit
+          = form.submit "SEND"
