@@ -17,7 +17,7 @@
       = link_to new_effect_path,class: "header__list-post" do
         = icon('fa', 'pen')
         新規投稿
-      = link_to user_path(current_user.id),class: "header__list-mypage" do
+      = link_to user_path(current_user.id),class: "header__list-mypage" ,data: {"turbolinks" => false} do
         = icon('fa', 'user-circle')
         マイページ
       = link_to destroy_user_session_path, method: :delete,class: "header__list-logout" do
