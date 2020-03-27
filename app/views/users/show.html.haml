@@ -17,16 +17,16 @@
             .content__box__hi-text
               = effect.name
         .content__box__row
-          .koop
+          .content__box__row-attri
             種類:
-            .koop-attri
+            .content__box__row-attri
               = effect.attri
           .post
             投稿者:
             .post-name
               = effect.user.nickname
         .content__box__image
-          = link_to image_tag(effect.image.url),effect_path(effect.id), method: :get
+          = link_to image_tag(effect.image.url),effect_path(effect.id), method: :get, class:"content__box__image"
           
 
 

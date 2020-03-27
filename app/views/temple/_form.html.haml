@@ -3,6 +3,7 @@
   .preview
   .form
     = form_with(model: @effect, local: true) do |f|
+      = f.submit '登録する' ,class: "form-btn"
       .form__hi
         = f.text_field :maker, placeholder: "メーカー名" ,class: "form-maker"
         = f.text_field :name, placeholder: "エフェクター名" ,class: "form-maker"
@@ -15,4 +16,4 @@
           = f.file_field :image,class: "form-label-btn",id:"effect_image"
           .form-in
             = image_tag @effect.image.url,id: :img_prev if @effect.image?
-          = f.submit '登録する' ,class: "form-btn"
+          

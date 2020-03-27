@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', ()=> {
 $(function() {
   let buildHTML = (imageUrl) => {
-    let html = `<img width="250" height="250" id="img_prev" src="${imageUrl}">`
+    let html = `<img width="200" height="200" id="img_prev" src="${imageUrl}">`
     return html;
   }
   function readURL(input) {
@@ -10,7 +10,6 @@ $(function() {
       reader.onload = function (e) {
         $('#img_prev').attr('src', e.target.result);
       }
-      console.log("あかん！")
       reader.readAsDataURL(input.files[0]);
     }
   }
