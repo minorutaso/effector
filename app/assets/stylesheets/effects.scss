@@ -119,12 +119,16 @@ a{
 }
 
 .view{
-    height: calc(100vh - 240px);
+    height: calc(100vh - 260px);
     width: calc(100vw - 40px);
     background-image:  image-url("back-new.jpg");
     background-size:  cover;
     font-size: 20px;
     padding: 20px;
+    // display: flex;
+    .preview{
+        display: flex;
+    }
     .view_box{
         height: 100px;
         width: 100px;
@@ -134,15 +138,7 @@ a{
     }
 
     .form{// 新規投稿ページ
-        &__row{
-            &-img{
-                .form-in{
-                    height: 100px;
-                    width: 100px;
-                    object-fit: cover;
-                }
-            }
-        }
+        
             &-maker{
                 width: 264px;
                 margin-top: 10px;
@@ -160,9 +156,10 @@ a{
             }
             &-label{
                 &-img{
+                    margin-left: 30px;
                     cursor: pointer;
-                    font-size: 40px;
-                    margin-top: 10px;
+                    font-size: 41px;
+                    margin-top: 7px;
                     object-fit:cover;
                 }
                 &-btn{
@@ -179,11 +176,18 @@ a{
             &-btn{
                 cursor: pointer;
                 border: solid 1px;
-                margin-top: 10px;
+                height: 60px;
                 width:100px;
                 border-radius: 20px;
                 box-shadow: 3px 3px 3px gray;
                 transition: 0.3s;
+            }
+            .form__row-img{
+                display: flex;
+                    .form-in{
+                        height: 280px;
+                        max-width: 280px;
+                    }
             }
     }
 }

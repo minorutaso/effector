@@ -10,9 +10,9 @@
             .content__box__hi-text
               = effect.name
         .content__box__row
-          .koop
+          .content__box__row-attri
             種類:
-            .koop-attri
+            .content__box__row-attri
               = effect.attri
           .post
             投稿者:
@@ -21,6 +21,4 @@
         .content__box__image
           = link_to effect_path(effect.id) do
             = image_tag effect.image.url, class: "index-images"
-          
 .footer
-  -# = image_tag @effects.image.url if @effects.image?
