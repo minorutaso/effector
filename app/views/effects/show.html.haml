@@ -16,8 +16,8 @@
         .content-attri
           　種類　：
           = @effect.attri
-      .content-image
-        = image_tag @effect.image.url
+        .content__box__image
+          = image_tag @effect.image.url, class: "index-images"  
       .content-text
         =@effect.text
   .comment
