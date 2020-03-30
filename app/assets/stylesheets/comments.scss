@@ -28,9 +28,6 @@
         overflow: scroll;
     }
 }
-img{
-    height: 100%;
-}
 .comment{
     &__view{
         height: calc(100vh - 140px);
@@ -77,7 +74,6 @@ img{
                 
             }
     }}
-
         }
     }
 }

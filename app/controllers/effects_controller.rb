@@ -1,7 +1,7 @@
 class EffectsController < ApplicationController
     before_action :move_to_index, except: [:index, :show, :search]
     def index
-        @effects = Effect.includes(:user)
+        @effects = Effect.includes(:user).page(params[:page]).per(16).order("created_at DESC")
     end
     
     def new
