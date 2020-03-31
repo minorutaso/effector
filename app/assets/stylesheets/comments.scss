@@ -62,6 +62,9 @@
         background-color: grey;
         padding: 10px;
         line-height: 80px;
+        &-message{
+            text-align: center;
+        }
         &-comment{
         display: flex;
             .send-form{

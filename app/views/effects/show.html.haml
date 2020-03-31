@@ -31,10 +31,16 @@
           .comment__view__box-row  
             .comment__view__box-row__text
               = comment.text 
-    .send
-      = form_with(model: [@effect, @comment], local: true) do |form| 
-        .send-comment
-          コメントを入力 :
-          = form.text_area :text,class:"send-form"
-          .send-form-submit
-            = form.submit "送信"
+    - if user_signed_in? 
+      .send
+        = form_with(model: [@effect, @comment], local: true) do |form| 
+          .send-comment
+            コメントを入力 :
+            = form.text_area :text,class:"send-form"
+            .send-form-submit
+              = form.submit "送信"
+    - else
+      .send
+        .send-message
+          コメントをするにはログインか
+          新規登録を行ってください。
