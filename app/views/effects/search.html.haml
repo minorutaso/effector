@@ -2,7 +2,7 @@
   = render 'temple/head'
 .main
   .content
-    -@effects.each do |effect| 
+    - @effects.each do |effect|
       = render partial: "effects/searches", locals: { effect: effect }
       .content__box
         .content__box__hi
@@ -11,14 +11,15 @@
             .content__box__hi-text
               = effect.name
         .content__box__row
-          .koop
+          .content__box__row-attri
             種類:
-          .koop-attri
-            = effect.attri
+            .content__box__row-attri
+              = effect.attri
           .post
             投稿者:
             .post-name
-            = link_to effect.user.nickname,user_path(effect.user.id), method: :get
+              = link_to effect.user.nickname,user_path(effect.user.id), method: :get
         .content__box__image
-        = link_to image_tag(effect.image.url),effect_path(effect.id), method: :get
+          = link_to effect_path(effect.id) do
+            = image_tag effect.image.url, class: "index-images"
         
