@@ -5,6 +5,9 @@
   .page
     = @nickname
     さんの投稿一覧
+  .pagenate
+    .pagenate-text
+      = paginate(@effects)
   .content
     - @effects.each do |effect|
       .content__box

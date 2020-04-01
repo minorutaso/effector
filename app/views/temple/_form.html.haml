@@ -8,7 +8,7 @@
           = f.text_field :name, placeholder: "エフェクター名" ,class: "form-maker"
           = f.select :attri, [["歪み系"],["空間系"],["揺らし系"],["ダイナミクス系"],["フィルター系"],["アンプ系"],["ハーモニー系"],["ボリューム系"],["回路系"],["シンセ系"],["マルチエフェクター "]],  :prompt => "種類を選択してください",class: "form-attri"
         .form__row
-          = f.text_area :text, placeholder: "説明" ,class: "form-text"
+          = f.text_area :text, placeholder: "特徴や説明" ,class: "form-text"
           = f.submit '登録する' ,class: "form-btn"
       .form__row-img
         = f.label :image, class: 'form-label' do

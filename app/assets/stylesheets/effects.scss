@@ -54,6 +54,12 @@ a{
     background-image:  image-url("20100421154757fc1");
     background-size: cover;
     background-attachment: fixed;
+    .pagenate{
+        &-text{
+            color: springgreen;
+
+        }
+    }
     .content{
         display: flex;
         flex-wrap:wrap;
@@ -209,6 +215,10 @@ img{
     object-fit: cover;
 }
 .index-images {
+    height: 280px;
+    max-width: 280px;
+}
+#img_prev{
     height: 280px;
     max-width: 280px;
 }

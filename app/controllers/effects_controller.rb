@@ -1,7 +1,7 @@
 class EffectsController < ApplicationController
     before_action :move_to_index, except: [:index, :show, :search]
     def index
-        @effects = Effect.includes(:user)
+        @effects = Effect.includes(:user).order("created_at DESC").page(params[:page]).per(16)
     end
     
     def new
@@ -32,7 +32,7 @@ class EffectsController < ApplicationController
         redirect_to user_path(current_user.id)
     end
     def search
-        @effects = Effect.search(params[:keyword])
+        @effects = Effect.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(10)
     end
     private
     def effect_params

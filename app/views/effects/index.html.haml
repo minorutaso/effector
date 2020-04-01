@@ -1,6 +1,9 @@
 .wrapper
   = render 'temple/head'
 .main
+  .pagenate
+    .pagenate-text
+      = paginate(@effects)
   .content
     - @effects.each do |effect|
       .content__box
