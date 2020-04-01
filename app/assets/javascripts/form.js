@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', ()=> {
 $(function() {
   let buildHTML = (imageUrl) => {
-    let html = `<img width="200" height="200" id="img_prev" src="${imageUrl}">`
+    let html = `<img max-width="280" height="280" id="img_prev" src="${imageUrl}">`
     return html;
   }
   function readURL(input) {
