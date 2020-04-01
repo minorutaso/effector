@@ -3,22 +3,23 @@
 .block
   .sidebar
     .sidebar-link
-      .content
-        .content-name
+      .sidebar__effect
+        .sidebar__effect-name
           投稿者：
           = @effect.user.nickname
-        .content-maker
+        .sidebar__effect-maker
           メーカー：
           = @effect.maker
-        .content-effect-name
+        .sidebar__effect-name
           　名前　：
           = @effect.name
-        .content-attri
+        .sidebar__effect-attri
           　種類　：
           = @effect.attri
-        .content__box__image
-          = image_tag @effect.image.url, class: "index-images"  
-      .content-text
+        .sidebar__effect__box
+          .sidebar__effect__box-image
+            = image_tag @effect.image.url, class: "index-images"  
+      .sidebar__effect-text
         =@effect.text
   .comment
     .comment__view
