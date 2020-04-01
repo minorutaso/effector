@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 .header{
     width: 100vw;
     height: 222px;
@@ -5,7 +8,7 @@
     line-height: 70px;
     justify-content: space-between;
     background-image:  image-url("2020");
-    background-size:  120vw;
+    background-size: 120vw;
     a {
         margin-left: 20px;
         color: white;
@@ -14,16 +17,24 @@
     &__title-text{
         font-size: 18px;
         margin-left: 20px;
-        margin-top: 20px;
+        margin-bottom: -10px;
         line-height: 25px;
         color: rgb(255, 255, 255);
         -webkit-text-stroke: 1px rgba(239, 255, 242, 0.835);
+    }
+    .search{
+        font-size: 18px;
+        margin-left: 20px;
     }
     &__list{
         line-height: 80px;
         font-size: 20px;
         margin-right: 50px;
         color: rgb(248, 244, 244);
+        display: flex;
+        &-name{
+            display: flex;
+        }
         a{
             margin-left: 20px;
             font-size: 20px;
@@ -34,9 +45,6 @@
             text-align: right;
         }
     }
-}
-a{
-    text-decoration: none;
 }
 .main{
     width: calc(100vw - 30px);
