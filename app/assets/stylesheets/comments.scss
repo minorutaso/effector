@@ -9,11 +9,12 @@
         text-align: left;
         &__effect{
             padding: 10px;
-            
-            &-name{
+            &-maker{
                 margin-top: 3px;
+            }
+            &-name{
                 font-size: 15px;
-                margin-bottom: 20px;
+                // margin-bottom: 5px;
             }
             &__box{
                 text-align: center;
@@ -27,7 +28,7 @@
             padding: 10px;
             font-size: 17px;
             height: auto;
-            max-height: 300px;
+            max-height: 90%;
             background-color: rgba(80, 92, 104, 0.787);
             overflow: scroll;
         }
@@ -48,7 +49,7 @@
                 padding: 5px;
                 &-hi{
                     display: flex;
-                    justify-sidebar: space-between;
+                    justify-content: space-between;
                 }
                 &-row{
                     &__text{

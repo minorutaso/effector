@@ -129,7 +129,6 @@ a{
     line-height: 74px;
     color: rgb(77, 77, 29);
 }
-
 .view{
     height: calc(100vh - 260px);
     width: calc(100vw - 40px);
@@ -148,9 +147,7 @@ a{
     input{
         display: block;
     }
-
-    .form{// 新規投稿ページ
-        
+    .form{// 投稿ページ
             &-maker{
                 width: 264px;
                 margin-top: 10px;
@@ -196,10 +193,10 @@ a{
             }
             .form__row-img{
                 display: flex;
-                    .form-in{
-                        height: 280px;
-                        max-width: 280px;
-                    }
+                .form-in{
+                    height: 280px;
+                    max-width: 280px;
+                }
             }
     }
 }
@@ -211,10 +208,7 @@ a{
 img{
     object-fit: cover;
 }
-
 .index-images {
     height: 280px;
     max-width: 280px;
 }
-
-
