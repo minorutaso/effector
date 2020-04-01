@@ -1,8 +1,11 @@
 class CommentsController < ApplicationController
     def create
         @effect = Effect.all
-        comment = Comment.create(comment_params)
-        redirect_to "/effects/#{comment.effect.id}" 
+        @comment = Comment.create(comment_params)
+        respond_to do |format|
+          format.html { redirect_to effect_path(params[:effect_id])  }
+          format.json
+        end
     end
     
     private
