@@ -22,6 +22,6 @@
             .post-name
               = link_to effect.user.nickname,user_path(effect.user.id), method: :get
         .content__box__image
-          = link_to effect_path(effect.id) do
+          = link_to effect_path(effect.id) ,data: {"turbolinks" => false}do
             = image_tag effect.image.url, class: "index-images"
 .footer

@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', ()=> {
 $(function(){
     function buildHTML(comment){
         var html = `<div class="comment__view__box">
@@ -40,3 +41,4 @@ $(function(){
     })
     })
   })
+});

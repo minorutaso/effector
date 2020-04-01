@@ -29,7 +29,7 @@
             .post-name
               = effect.user.nickname
         .content__box__image
-          = link_to effect_path(effect.id) do
-            = image_tag effect.image.url, class: "index-images"    
+          = link_to effect_path(effect.id) ,data: {"turbolinks" => false}do
+            = image_tag effect.image.url, class: "index-images"
 
 
