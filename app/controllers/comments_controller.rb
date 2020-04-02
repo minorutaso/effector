@@ -7,7 +7,11 @@ class CommentsController < ApplicationController
           format.json
         end
     end
-
+    # def destroy
+    #     comment = Comment.find(params[:id])
+    #     comment.destroy
+    #     redirect_to effect_path(comment.id)
+    # end
     
     private
     def comment_params
