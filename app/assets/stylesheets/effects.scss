@@ -3,7 +3,7 @@ a{
 }
 .header{
     width: 100vw;
-    height: 222px;
+    max-height: 222px;
     display: flex;
     line-height: 70px;
     justify-content: space-between;
