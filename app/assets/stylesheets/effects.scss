@@ -48,8 +48,8 @@ a{
 }
 .main{
     width: calc(100vw - 30px);
-    height: 1800px;
     padding: 15px;
+    min-height: calc(100vh - 200px);
     background-image:  image-url("20100421154757fc1");
     background-size: cover;
     background-attachment: fixed;
