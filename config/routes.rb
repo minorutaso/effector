@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :searches, only: :index
   end
   resources :effects do
-    resources :comments, only: :create
+    resources :comments, only: [:create,:edit,:destroy]
   end
   resources :users, only: :show
 end

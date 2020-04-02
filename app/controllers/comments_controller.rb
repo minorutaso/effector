@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
           format.json
         end
     end
+
     
     private
     def comment_params
