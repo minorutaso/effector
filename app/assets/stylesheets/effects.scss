@@ -141,7 +141,6 @@ a{
     background-size:  cover;
     font-size: 20px;
     padding: 20px;
-    // display: flex;
     .preview{
         display: flex;
     }
@@ -198,10 +197,6 @@ a{
             }
             .form__row-img{
                 display: flex;
-                .form-in{
-                    height: 280px;
-                    max-width: 280px;
-                }
             }
     }
 }
@@ -211,13 +206,16 @@ a{
     background-size:  cover;
 }
 img{
-    object-fit: cover;
-}
-.index-images {
-    height: 280px;
+    max-height: 280px;
     max-width: 280px;
+    object-fit: scale-down;}
+.index-images {
+    max-height: 280px;
+    max-width: 280px;
+    object-fit: scale-down;
 }
 #img_prev{
-    height: 280px;
+    max-height: 280px;
     max-width: 280px;
+    object-fit: scale-down;
 }

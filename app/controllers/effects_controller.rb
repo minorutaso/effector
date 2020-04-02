@@ -11,6 +11,7 @@ class EffectsController < ApplicationController
     def create
         Effect.create(effect_params)
         @effects = Effect.all.order("created_at DESC").page(params[:page]).per(16)
+        
         render :index
     end
     def destroy

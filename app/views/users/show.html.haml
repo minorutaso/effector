@@ -12,8 +12,8 @@
     - @effects.each do |effect|
       .content__box
         - if user_signed_in? && current_user.id == effect.user_id
-          = link_to '編集', "/effects/#{effect.id}/edit", method: :get,class:"content__box-edit", data: {"turbolinks" => false}
-          = link_to '削除', "/effects/#{effect.id}", method: :delete,class:"content__box-delete"
+          = link_to '編集', edit_effect_path(effect.id), method: :get,class:"content__box-edit", data: {"turbolinks" => false}
+          = link_to '削除', effect_path(effect.id), method: :delete,class:"content__box-delete"
         .content__box__hi
           .content__box__hi-maker
             = effect.maker
