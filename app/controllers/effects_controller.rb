@@ -32,6 +32,7 @@ class EffectsController < ApplicationController
         redirect_to user_path(current_user.id)
     end
     def search
+        binding.pry
         @effects = Effect.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(10)
     end
     private

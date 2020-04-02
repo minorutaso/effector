@@ -5,7 +5,7 @@ class Effect < ApplicationRecord
     end
     def self.search(search)
         return Effect.all unless search
-        Effect.where('text LIKE(?)', "%#{search}%")
+        Effect.where('text LIKE(?) OR maker LIKE(?) OR attri LIKE(?) OR name LIKE(?)',"%#{search}%","%#{search}%","%#{search}%","%#{search}%")
     end
     validates :image,:text, presence: true
     self.inheritance_column = :_type_disabled
