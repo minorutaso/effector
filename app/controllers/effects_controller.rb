@@ -11,8 +11,7 @@ class EffectsController < ApplicationController
     def create
         Effect.create(effect_params)
         @effects = Effect.all.order("created_at DESC").page(params[:page]).per(16)
-        if 
-        render :index
+        redirect_to root_path
     end
     def destroy
         effect = Effect.find(params[:id])

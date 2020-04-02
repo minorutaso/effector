@@ -1,20 +1,21 @@
 .view
   エフェクターの情報を入力してください。
   = form_with(model: @effect, local: true) do |f|
+    = render 'layouts/error_messages', model: f.object 
     .preview
       .form
         .form__hi
-          = f.text_field :maker, placeholder: "メーカー名" ,class: "form-maker"
-          = f.text_field :name, placeholder: "エフェクター名" ,class: "form-maker"
+          = f.text_field :maker, placeholder: "メーカー名" ,required: true,class: "form-maker"
+          = f.text_field :name, placeholder: "エフェクター名" ,required: true,class: "form-maker"
           = f.select :attri, [["歪み系"],["空間系"],["揺らし系"],["ダイナミクス系"],["フィルター系"],["アンプ系"],["ハーモニー系"],["ボリューム系"],["回路系"],["シンセ系"],["マルチエフェクター "]],  :prompt => "種類を選択してください",class: "form-attri"
         .form__row
-          = f.text_area :text, placeholder: "特徴や説明" ,class: "form-text"
-          = f.submit '登録する' ,class: "form-btn"
+          = f.text_area :text, placeholder: "特徴や説明" ,required: true,class: "form-text"
+          = f.submit '登録する' ,required: true,class: "form-btn"
       .form__row-img
         = f.label :image, class: 'form-label' do
           = icon('fas', 'image', class: "form-label-img")
           画像を選択してください。
-        = f.file_field :image,class: "form-label-btn",id:"effect_image"
+        = f.file_field :image,required: true,class: "form-label-btn",id:"effect_image"
         .form-in
           = image_tag @effect.image.url,id: :img_prev if @effect.image?
-          
+            

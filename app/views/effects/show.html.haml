@@ -37,7 +37,7 @@
         = form_with(model: [@effect, @comment], local: true,id: "new_comment") do |form| 
           .send-comment
             コメントを入力
-            = form.text_area :text,class:"send-form"
+            = form.text_area :text,required: true, class:"send-form"
             .send-form-submit
               = form.submit "送信",class: "form__submit"
     - else
