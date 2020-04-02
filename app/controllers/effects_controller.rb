@@ -33,7 +33,7 @@ class EffectsController < ApplicationController
     end
     def search
         binding.pry
-        @effects = Effect.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(10)
+        @effects = Effect.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(16)
     end
     private
     def effect_params
