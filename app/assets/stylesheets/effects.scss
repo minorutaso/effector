@@ -46,7 +46,7 @@ a{
         }
     }
 }
-.main{
+.main{//投稿一覧
     width: calc(100vw - 30px);
     padding: 15px;
     min-height: calc(100vh - 200px);
@@ -80,7 +80,7 @@ a{
             }
             &__hi{
                 display: flex;
-                margin: 3px;
+                margin-left: 3px;
                 text-align: left;
                 &-maker{
                     padding-right: 10px;
@@ -91,19 +91,9 @@ a{
             }
             &__row{
                 margin-left: 3px;
-                .post{
-                    display: flex;
-                    font-size: 14px;
-                        &-name{
-                            margin-left: 3px;
-                        }
-                }
                 &-attri{
                     display: flex;
                     font-size: 14px;
-                    &-attri{
-                    margin-left: 3px;
-                    }
                 }
             }
             &__image{
