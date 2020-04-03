@@ -19,8 +19,7 @@
         .content__box__row
           .content__box__row-attri
             種類:
-            .content__box__row-attri
-              = effect.attri
+            = effect.attri
         .content__box__image
           = link_to effect_path(effect.id) ,data: {"turbolinks" => false}do
             = image_tag effect.image.url, class: "index-images"
