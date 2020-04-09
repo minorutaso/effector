@@ -1,7 +1,5 @@
 $img: 240px;
 
-
-
 a{
     text-decoration: none;
 }
@@ -54,7 +52,7 @@ a{
     width: calc(100vw - 30px);
     padding: 15px;
     min-height: calc(100vh - 200px);
-    background-image:  image-url("20100421154757fc1");
+    background-image:  image-url("main");
     background-size: cover;
     background-attachment: fixed;
     .pagenate{
@@ -193,7 +191,7 @@ a{
 }
 .footer{
     height: 300px;
-    background-image:  image-url("banner-1571870_1280");
+    background-image:  image-url("footer");
     background-size:  cover;
 }
 img{
