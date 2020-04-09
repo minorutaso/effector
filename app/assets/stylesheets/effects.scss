@@ -61,12 +61,12 @@ a{
     .content{
         display: flex;
         flex-wrap:wrap;
-        justify-content: flex-start;
-        position: relative;
+        // justify-content: flex-start;
+        
         &__box{
             background-color: ghostwhite;
             border: solid 1px black;
-            margin: 18px;
+            margin: 20px;
             text-align: right;
             &-edit{
                 border: limegreen solid 1px;
@@ -98,8 +98,8 @@ a{
             &__image{
                     border-radius: 50%;
                     transition: all 0.6s ease 0s;
-                    height: 280px;
-                    width: 280px;
+                    height: 240px;
+                    width: 240px;
                     margin: 10px;
                     padding: 5px;
                     text-align: center;
@@ -122,7 +122,7 @@ a{
     color: rgb(77, 77, 29);
 }
 .view{
-    height: calc(100vh - 260px);
+    height: calc(100vh - 240px);
     width: calc(100vw - 40px);
     background-image:  image-url("back-new.jpg");
     background-size:  cover;
@@ -193,16 +193,16 @@ a{
     background-size:  cover;
 }
 img{
-    max-height: 280px;
-    max-width: 280px;
+    max-height: 240px;
+    max-width: 240px;
     object-fit: scale-down;}
 .index-images {
-    max-height: 280px;
-    max-width: 280px;
+    max-height: 240px;
+    max-width: 240px;
     object-fit: scale-down;
 }
 #img_prev{
-    max-height: 280px;
-    max-width: 280px;
+    max-height: 240px;
+    max-width: 240px;
     object-fit: scale-down;
 }
