@@ -4,6 +4,7 @@ $(function(){
         var html = `<div class="comment__view__box">
                         <div class="comment__view__box-hi">
                             <a href=/users/${comment.user_id} class="comment__view__box-hi-name">${comment.user_name}</a>
+                            <a href=/effects/${effect.id}/comments/${comment.id} class="comment__view__box-hi-name">削除</a>
                             <div class="comment__view__box-hi-time">
                                 ${comment.created_at}
                             </div>

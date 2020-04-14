@@ -31,9 +31,9 @@ class EffectsController < ApplicationController
         effect.update(effect_params)
         redirect_to user_path(current_user.id)
     end
-    def search
-        @effects = Effect.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(16)
-    end
+    # def search
+    #     @effects = Effect.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(16)
+    # end
     private
     def effect_params
         params.require(:effect).permit(:nickname, :image, :name, :attri, :text, :maker,:keyword).merge(user_id: current_user.id)
