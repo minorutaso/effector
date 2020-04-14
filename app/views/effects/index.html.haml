@@ -1,26 +1,5 @@
 .wrapper
   = render 'temple/head'
-.main
-  .pagenate
-    .pagenate-text
-      = paginate(@effects)
-  .content
-    - @effects.each do |effect|
-      .content__box
-        .content__box__hi
-          .post
-            .post-name
-              投稿者:
-              = link_to effect.user.nickname,user_path(effect.user.id), method: :get
-            .content__box__hi-maker
-              = effect.maker
-              .content__box__hi-text
-                = effect.name
-        .content__box__row
-          .content__box__row-attri
-            種類:
-            = effect.attri
-        .content__box__image
-          = link_to effect_path(effect.id) ,data: {"turbolinks" => false}do
-            = image_tag effect.image.url, class: "index-images"
+  = render 'temple/index'
+
 .footer
